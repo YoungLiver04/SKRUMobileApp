@@ -6,6 +6,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { EventsPage } from '../pages/events/events';
+import { HolidayPage } from '../pages/holiday/holiday';
+import { MapPage } from '../pages/map/map';
+import { MgtPage } from '../pages/list/mgt/mgt';
+import { SciPage } from '../pages/list/sci/sci';
+import { HusoPage } from '../pages/list/huso/huso';
+import { ArtPage } from '../pages/list/art/art';
+import { EduPage } from '../pages/list/edu/edu';
+import { TechnoPage } from '../pages/list/techno/techno';
+import { AgriPage } from '../pages/list/agri/agri';
 
 
 @Component({
@@ -26,6 +35,8 @@ export class MyApp {
       { title: 'หน้าหลัก', component: HomePage },
       { title: 'ข้อมูลและข่าวสารของคณะ', component: ListPage },
       { title: 'กิจกรรม', component: EventsPage },
+      { title: 'ปฎิทินวันหยุด', component: HolidayPage },
+      { title: 'แผนที่ภายในมหาวิทยาลัย', component: MapPage },
     ];
 
   }

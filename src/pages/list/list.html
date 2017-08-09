@@ -8,9 +8,28 @@
 </ion-header>
 
 <ion-content>
-  <ion-list inset>
-    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
-      {{ item }}
-    </button>
-  </ion-list>
+    <ion-list>
+      <button ion-item (click)="mgt()">
+        คณะวิทยาการจัดการ
+      </button>
+      <button ion-item (click)="sci()">
+        คณะวิทยาศาสตร์และเทคโนโลยี
+      </button>
+      <button ion-item (click)="huso()">
+        คณะมนุษยศาสตร์และสังคมศาสตร์
+      </button>
+      <button ion-item (click)="art()">
+        คณะศิลปกรรมศารตร์
+      </button>
+      <button ion-item (click)="edu()">
+        คณะครุศาสตร์
+      </button>
+      <button ion-item (click)="techno()">
+        คณะเทคโนโลยีอุตสาหกรรม
+      </button>
+      <button ion-item (click)="agri()">
+        คณะเทคโนโลยีการเกษร
+      </button>
+    </ion-list>
+ 
 </ion-content>
