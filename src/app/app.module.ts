@@ -19,7 +19,7 @@ import { AgriPage } from '../pages/list/agri/agri';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { GoogleMaps} from '@ionic-native/google-maps';
+import { AgmCoreModule } from 'angular2-google-maps/core';
 
 @NgModule({
   declarations: [
@@ -40,6 +40,7 @@ import { GoogleMaps} from '@ionic-native/google-maps';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    AgmCoreModule.forRoot({apiKey: ''})
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -60,7 +61,7 @@ import { GoogleMaps} from '@ionic-native/google-maps';
   providers: [
     StatusBar,
     SplashScreen,
-    GoogleMaps,
+   
     {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })
