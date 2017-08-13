@@ -12,7 +12,7 @@ import 'rxjs/add/operator/map';
 export class RestapiService {
 
   constructor(public http: Http) {
-    console.log('Hello Restapi Provider');
+    
   }
 
 }

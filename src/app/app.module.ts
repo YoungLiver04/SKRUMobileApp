@@ -21,6 +21,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 
+
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -61,8 +64,9 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
   providers: [
     StatusBar,
     SplashScreen,
+    
    
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    {provide: ErrorHandler, useClass: IonicErrorHandler },
   ]
 })
 export class AppModule {}
