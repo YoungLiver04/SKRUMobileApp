@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
+import { HttpModule } from '@angular/http';
+
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -17,9 +19,13 @@ import { EduPage } from '../pages/list/edu/edu';
 import { TechnoPage } from '../pages/list/techno/techno';
 import { AgriPage } from '../pages/list/agri/agri';
 
+
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AgmCoreModule } from 'angular2-google-maps/core';
+import { AppSettingsProvider } from '../providers/app-settings/app-settings';
+import { HolidayServiceProvider } from '../providers/holiday-service-ts/holiday-service-ts';
 
 
 
@@ -42,6 +48,7 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
     AgmCoreModule.forRoot({apiKey: ''})
   ],
@@ -67,6 +74,9 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
     
    
     {provide: ErrorHandler, useClass: IonicErrorHandler },
+    AppSettingsProvider,
+    HolidayServiceProvider,
+    
   ]
 })
 export class AppModule {}

@@ -7,7 +7,23 @@
   </ion-navbar>
 </ion-header>
 
+<ion-content class="cards-bg" *ngFor="let dbholidays of users | async">
+  
+    <ion-card>
+  
+  
+      <ion-card-content>
+        <ion-card-title>
+          <p> {{ "ชื่อวันหยุด:" + dbholidays.holidayname}} <p>
+              <p>
+                  {{ "วันเวลา: " +  dbholidays.holidaydate }}
+                </p>
+        </ion-card-title>
+        <p>
+          เนื้อ
+        </p>
+      </ion-card-content>
+    </ion-card>
 
-<ion-content padding>
-
+ 
 </ion-content>

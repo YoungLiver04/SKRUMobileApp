@@ -1,24 +1,26 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HolidayServiceProvider } from '../../providers/holiday-service-ts/holiday-service-ts';
 
-/**
- * Generated class for the HolidayPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-@IonicPage()
+
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { NavController, ToastController } from 'ionic-angular';
+
+
 @Component({
   selector: 'page-holiday',
   templateUrl: 'holiday.html',
 })
 export class HolidayPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+   users: Observable<any>;
+ 
+  constructor(public navCtrl: NavController, public HolidayServiceProvider: HolidayServiceProvider) {
+    this.loadUsers();
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HolidayPage');
+ 
+  loadUsers() {
+    this.users = this.HolidayServiceProvider.getdbholidays();
+    
   }
-
+ 
 }
