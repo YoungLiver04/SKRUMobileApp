@@ -12,7 +12,7 @@ import { NavController, ToastController } from 'ionic-angular';
 })
 export class HolidayPage {
 
-   users: Observable<any>;
+   users: Observable <any> ;
  
   constructor(public navCtrl: NavController, public HolidayServiceProvider: HolidayServiceProvider) {
     this.loadUsers();

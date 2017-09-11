@@ -1,4 +1,7 @@
+import { EventServiceProvider } from '../../providers/event-service/event-service';
+
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -13,12 +16,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'events.html',
 })
 export class EventsPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad EventsPage');
-  }
-
+  users: Observable <any> ;
+  
+   constructor(public navCtrl: NavController, public EventServiceProvider: EventServiceProvider) {
+     this.loadUsers();
+   }
+  
+   loadUsers() {
+     this.users = this.EventServiceProvider.getdbholidays();
+     
+   }
 }

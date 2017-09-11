@@ -1,3 +1,4 @@
+
 <ion-header>
   <ion-navbar color="skru">
     <button ion-button menuToggle>
@@ -7,18 +8,19 @@
   </ion-navbar>
 </ion-header>
 
-
-<ion-content class="cards-bg">
-
+<ion-content class="cards-bg" >
   <ion-card>
+      
+        <ion-item *ngFor="let news of users | async">
+          <h2>{{news.newsHead }}</h2>
+          <p> {{news.atdate }}</p>
 
-    image
+        <ion-card-content>
+          <p>{{news.newsApp}}</p>
+        </ion-card-content>
+      </ion-item>
+       
+  </ion-card>
 
-    <ion-card-content>
-      <ion-card-title>
-        หัวข้อข่าว
-      </ion-card-title>
-      <p>
-        ข้อความ
-      </p>
-    </ion-card-content>
+
+</ion-content>

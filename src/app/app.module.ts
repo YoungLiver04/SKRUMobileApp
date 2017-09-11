@@ -26,6 +26,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { AppSettingsProvider } from '../providers/app-settings/app-settings';
 import { HolidayServiceProvider } from '../providers/holiday-service-ts/holiday-service-ts';
+import { EventServiceProvider } from '../providers/event-service/event-service';
+import { NewsServiceTsProvider } from '../providers/news-service-ts/news-service-ts';
+import { MgtServiceTsProvider } from '../providers/mgt-service-ts/mgt-service-ts';
 
 
 
@@ -76,6 +79,9 @@ import { HolidayServiceProvider } from '../providers/holiday-service-ts/holiday-
     {provide: ErrorHandler, useClass: IonicErrorHandler },
     AppSettingsProvider,
     HolidayServiceProvider,
+    EventServiceProvider,
+    NewsServiceTsProvider,
+    MgtServiceTsProvider,
     
   ]
 })

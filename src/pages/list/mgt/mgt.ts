@@ -1,3 +1,5 @@
+import { MgtServiceTsProvider } from '../../../providers/mgt-service-ts/mgt-service-ts';
+import { Observable } from 'rxjs/Observable';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -14,11 +16,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MgtPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MgtPage');
-  }
+  users: Observable <any> ;
+  
+   constructor(public navCtrl: NavController, public MgtServiceTsProvider: MgtServiceTsProvider) {
+     this.loadUsers();
+   }
+  
+   loadUsers() {
+     this.users = this.MgtServiceTsProvider.getnews();
+     
+   }
+  
 
 }
