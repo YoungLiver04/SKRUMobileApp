@@ -16,14 +16,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ArtPage {
 
-  users: Observable < any > ;
+  newsart: Observable < any > ;
   
    constructor(public navCtrl: NavController, public ArtServiceTsProvider: ArtServiceTsProvider) {
      this.loadnews();
    }
 
    loadnews() {
-     this.users = this.ArtServiceTsProvider.getnews();
+     this.newsart = this.ArtServiceTsProvider.getnews();
      
    }
   }

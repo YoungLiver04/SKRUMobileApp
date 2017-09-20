@@ -16,14 +16,14 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class MgtPage {
 
-  users: Observable < any > ;
+  newsmgt: Observable < any > ;
   
    constructor(public navCtrl: NavController, public MgtServiceTsProvider: MgtServiceTsProvider) {
      this.loadnews();
    }
 
    loadnews() {
-     this.users = this.MgtServiceTsProvider.getnews();
+     this.newsmgt = this.MgtServiceTsProvider.getnews();
      
    }
   

@@ -16,14 +16,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class EduPage {
 
-  users: Observable < any > ;
+  newsedu: Observable < any > ;
   
    constructor(public navCtrl: NavController, public EduServiceTsProvider: EduServiceTsProvider) {
      this.loadnews();
    }
 
    loadnews() {
-     this.users = this.EduServiceTsProvider.getnews();
+     this.newsedu = this.EduServiceTsProvider.getnews();
      
    }
   }

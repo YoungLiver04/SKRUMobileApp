@@ -15,14 +15,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AgriPage {
 
-  users: Observable < any > ;
+  newsagri: Observable < any > ;
   
    constructor(public navCtrl: NavController, public AgriServiceTsProvider: AgriServiceTsProvider) {
      this.loadnews();
    }
 
    loadnews() {
-     this.users = this.AgriServiceTsProvider.getnews();
+     this.newsagri = this.AgriServiceTsProvider.getnews();
      
    }
   }

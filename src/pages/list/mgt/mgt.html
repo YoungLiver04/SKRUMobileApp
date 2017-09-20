@@ -9,7 +9,7 @@
 
 <ion-content>
   <ion-item>
-  <ion-card *ngFor="let news of users | async">
+  <ion-card *ngFor="let news of newsmgt | async">
       <ion-card-header>
           {{news.newsHead }}
           <p>{{news.atdate }}</p>

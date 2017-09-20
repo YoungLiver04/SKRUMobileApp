@@ -16,14 +16,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TechnoPage {
 
-  users: Observable < any > ;
+  newstechno: Observable < any > ;
   
    constructor(public navCtrl: NavController, public TechnoServiceTsProvider: TechnoServiceTsProvider) {
      this.loadnews();
    }
 
    loadnews() {
-     this.users = this.TechnoServiceTsProvider.getnews();
+     this.newstechno = this.TechnoServiceTsProvider.getnews();
      
    }
   }

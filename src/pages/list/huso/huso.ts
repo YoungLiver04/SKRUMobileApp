@@ -16,14 +16,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HusoPage {
 
-  users: Observable < any > ;
+  newshuso: Observable < any > ;
   
    constructor(public navCtrl: NavController, public HusoServiceTsProvider: HusoServiceTsProvider) {
      this.loadnews();
    }
 
    loadnews() {
-     this.users = this.HusoServiceTsProvider.getnews();
+     this.newshuso = this.HusoServiceTsProvider.getnews();
      
    }
   }
