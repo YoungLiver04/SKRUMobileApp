@@ -1,4 +1,6 @@
+import { SciServiceTsProvider } from '../../../providers/sci-service-ts/sci-service-ts';
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -14,11 +16,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class SciPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  users: Observable < any > ;
+  
+   constructor(public navCtrl: NavController, public SciServiceTsProvider: SciServiceTsProvider) {
+     this.loadnews();
+   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SciPage');
+   loadnews() {
+     this.users = this.SciServiceTsProvider.getnews();
+     
+   }
   }
-
-}

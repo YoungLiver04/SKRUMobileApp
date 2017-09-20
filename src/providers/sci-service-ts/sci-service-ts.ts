@@ -4,21 +4,21 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 /*
-  Generated class for the NewsServiceTsProvider provider.
+  Generated class for the SciServiceTsProvider provider.
 
   See https://angular.io/docs/ts/latest/guide/dependency-injection.html
   for more info on providers and Angular DI.
 */
 @Injectable()
-export class NewsServiceTsProvider {
+export class SciServiceTsProvider {
 
   apiUrl = this.AppSettingsProvider.getApiUrl();//ดึงข้อมูลมาจาก app set
   
    constructor(public http: Http, public AppSettingsProvider: AppSettingsProvider) {
    }
-  
    public getnews() {
-     return this.http.get(this.apiUrl + 'news1')//http://localhost:3000/+dbholidays
+    
+     return this.http.get(this.apiUrl + 'news7' )//http://localhost:3000/+news2
        .map(response => response.json().result);
    }
-}
+  }

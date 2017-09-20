@@ -1,4 +1,6 @@
+import { TechnoServiceTsProvider } from '../../../providers/techno-service-ts/techno-service-ts';
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -14,11 +16,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TechnoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  users: Observable < any > ;
+  
+   constructor(public navCtrl: NavController, public TechnoServiceTsProvider: TechnoServiceTsProvider) {
+     this.loadnews();
+   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad TechnoPage');
+   loadnews() {
+     this.users = this.TechnoServiceTsProvider.getnews();
+     
+   }
   }
-
-}

@@ -1,6 +1,7 @@
+import { AgriServiceTsProvider } from '../../../providers/agri-service-ts/agri-service-ts';
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
 /**
  * Generated class for the AgriPage page.
  *
@@ -14,11 +15,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AgriPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  users: Observable < any > ;
+  
+   constructor(public navCtrl: NavController, public AgriServiceTsProvider: AgriServiceTsProvider) {
+     this.loadnews();
+   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AgriPage');
+   loadnews() {
+     this.users = this.AgriServiceTsProvider.getnews();
+     
+   }
   }
-
-}

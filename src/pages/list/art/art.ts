@@ -1,4 +1,6 @@
+import { ArtServiceTsProvider } from '../../../providers/art-service-ts/art-service-ts';
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -14,11 +16,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ArtPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  users: Observable < any > ;
+  
+   constructor(public navCtrl: NavController, public ArtServiceTsProvider: ArtServiceTsProvider) {
+     this.loadnews();
+   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ArtPage');
+   loadnews() {
+     this.users = this.ArtServiceTsProvider.getnews();
+     
+   }
   }
-
-}

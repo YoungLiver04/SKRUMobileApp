@@ -16,9 +16,9 @@ export class MgtServiceTsProvider {
   
    constructor(public http: Http, public AppSettingsProvider: AppSettingsProvider) {
    }
-  
    public getnews() {
-     return this.http.get(this.apiUrl + 'news')//http://localhost:3000/+dbholidays
+    
+     return this.http.get(this.apiUrl + 'news2' )//http://localhost:3000/+news2
        .map(response => response.json().result);
    }
-}
+  }

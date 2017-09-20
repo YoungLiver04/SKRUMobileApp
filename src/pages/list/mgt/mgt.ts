@@ -1,7 +1,7 @@
 import { MgtServiceTsProvider } from '../../../providers/mgt-service-ts/mgt-service-ts';
 import { Observable } from 'rxjs/Observable';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 
 /**
  * Generated class for the MgtPage page.
@@ -16,13 +16,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MgtPage {
 
-  users: Observable <any> ;
+  users: Observable < any > ;
   
    constructor(public navCtrl: NavController, public MgtServiceTsProvider: MgtServiceTsProvider) {
-     this.loadUsers();
+     this.loadnews();
    }
-  
-   loadUsers() {
+
+   loadnews() {
      this.users = this.MgtServiceTsProvider.getnews();
      
    }

@@ -7,19 +7,18 @@
 
 </ion-header>
 
-<ion-content class="cards-bg" >
-  <ion-card>
+<ion-content>
+  <ion-item>
+  <ion-card *ngFor="let news of users | async">
+      <ion-card-header>
+          {{news.newsHead }}
+          <p>{{news.atdate }}</p>
+      </ion-card-header>
       
-        <ion-item *ngFor="let news of users | async">
-          <h2>{{news.newsHead }}</h2>
-          <p> {{news.atdate }}</p>
-
-        <ion-card-content>
-          <p>{{news.newsApp}}</p>
-        </ion-card-content>
-      </ion-item>
-       
-  </ion-card>
-
-
-</ion-content>
+      <ion-card-content>
+          {{news.newsApp }}
+      </ion-card-content> 
+    </ion-card>
+  </ion-item>
+  </ion-content>
+  

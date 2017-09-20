@@ -1,4 +1,6 @@
+import { HusoServiceTsProvider } from '../../../providers/huso-service-ts/huso-service-ts';
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -14,11 +16,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HusoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  users: Observable < any > ;
+  
+   constructor(public navCtrl: NavController, public HusoServiceTsProvider: HusoServiceTsProvider) {
+     this.loadnews();
+   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HusoPage');
+   loadnews() {
+     this.users = this.HusoServiceTsProvider.getnews();
+     
+   }
   }
-
-}

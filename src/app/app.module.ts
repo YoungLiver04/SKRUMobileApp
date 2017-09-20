@@ -29,6 +29,12 @@ import { HolidayServiceProvider } from '../providers/holiday-service-ts/holiday-
 import { EventServiceProvider } from '../providers/event-service/event-service';
 import { NewsServiceTsProvider } from '../providers/news-service-ts/news-service-ts';
 import { MgtServiceTsProvider } from '../providers/mgt-service-ts/mgt-service-ts';
+import { EduServiceTsProvider } from '../providers/edu-service-ts/edu-service-ts';
+import { HusoServiceTsProvider } from '../providers/huso-service-ts/huso-service-ts';
+import { AgriServiceTsProvider } from '../providers/agri-service-ts/agri-service-ts';
+import { SciServiceTsProvider } from '../providers/sci-service-ts/sci-service-ts';
+import { ArtServiceTsProvider } from '../providers/art-service-ts/art-service-ts';
+import { TechnoServiceTsProvider } from '../providers/techno-service-ts/techno-service-ts';
 
 
 
@@ -53,7 +59,7 @@ import { MgtServiceTsProvider } from '../providers/mgt-service-ts/mgt-service-ts
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp),
-    AgmCoreModule.forRoot({apiKey: ''})
+    AgmCoreModule.forRoot({apiKey: ''}),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -82,6 +88,12 @@ import { MgtServiceTsProvider } from '../providers/mgt-service-ts/mgt-service-ts
     EventServiceProvider,
     NewsServiceTsProvider,
     MgtServiceTsProvider,
+    EduServiceTsProvider,
+    HusoServiceTsProvider,
+    AgriServiceTsProvider,
+    SciServiceTsProvider,
+    ArtServiceTsProvider,
+    TechnoServiceTsProvider,
     
   ]
 })
