@@ -3,27 +3,20 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>กิจกรรม</ion-title>
+    <ion-title><ion-icon name="pulse"></ion-icon>กิจกรรม</ion-title>
   </ion-navbar>
 </ion-header>
 
 
-<ion-content class="cards-bg social-cards">
-
-<ion-card>
-
-  <ion-item *ngFor="let dbevents of users | async">
-    <h2>{{dbevents.eventname }}</h2>
-  <ion-card-content >
-    <p>{{dbevents.eventdetails }}</p>
-  </ion-card-content>
-
-  <ion-row>
-
-    
-  </ion-row>
-</ion-item>
-</ion-card>
-
-
-</ion-content>
+<ion-content>
+    <ion-card *ngFor="let dbevents of users | async">
+        <ion-card-header>
+            {{dbevents.eventname }}
+            
+        </ion-card-header>
+        
+        <ion-card-content>
+            {{dbevents.eventdetails }}
+        </ion-card-content> 
+    </ion-card>
+  </ion-content>

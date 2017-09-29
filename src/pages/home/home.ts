@@ -11,15 +11,16 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
   tabBarElement: any;
   splash = true;
-  users: Observable <any> ;
+  newshome: Observable <any> ;
+  
   
    constructor(public navCtrl: NavController, public NewsServiceTsProvider: NewsServiceTsProvider) {
-     this.loadUsers();
+     this.loadnews();
      this.tabBarElement = document.querySelector('.tabbar');
    }
   
-   loadUsers() {
-     this.users = this.NewsServiceTsProvider.getnews();
+   loadnews() {
+     this.newshome = this.NewsServiceTsProvider.getnews();
      
    }
 
@@ -30,6 +31,8 @@ export class HomePage {
       this.tabBarElement = 'flex';
     }, 4000);
   }
+
+  
   
 
 }

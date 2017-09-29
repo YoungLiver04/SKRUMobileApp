@@ -7,8 +7,7 @@
 
 </ion-header>
 
-<ion-content>
-  <ion-item>
+<ion-content class="background">
   <ion-card *ngFor="let news of newsmgt | async">
       <ion-card-header>
           {{news.newsHead }}
@@ -19,6 +18,6 @@
           {{news.newsApp }}
       </ion-card-content> 
     </ion-card>
-  </ion-item>
+ 
   </ion-content>
   

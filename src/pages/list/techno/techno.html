@@ -9,20 +9,17 @@
   <ion-navbar color="energy">
     <ion-title>Technology</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-<ion-content>
-  <ion-item>
-  <ion-card *ngFor="let news of newstechno | async">
-      <ion-card-header>
-          {{news.newsHead }}
-          <p>{{news.atdate }}</p>
-      </ion-card-header>
-      
-      <ion-card-content>
-          {{news.newsApp }}
-      </ion-card-content> 
+<ion-content class="background">
+    <ion-card *ngFor="let news of newstechno | async">
+        <ion-card-header>
+            {{news.newsHead }}
+            <p>{{news.atdate }}</p>
+        </ion-card-header>
+        
+        <ion-card-content>
+            {{news.newsApp }}
+        </ion-card-content> 
     </ion-card>
-  </ion-item>
   </ion-content>

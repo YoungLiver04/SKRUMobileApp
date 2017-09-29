@@ -1,7 +1,7 @@
 <div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
   <div class="flb">
     <div class="Aligner-item Aligner-item--top"></div>
-    <img src="assets/logo.svg">
+    <img src="assets/skru.png">
     <div class="Aligner-item Aligner-item--bottom"></div>
   </div>
 </div>
@@ -11,20 +11,18 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title class="home">Home </ion-title>
+    <ion-title class="home"><ion-icon name="home"></ion-icon>Home </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content>
-<ion-item>
-<ion-card *ngFor="let news of users | async">
-    <ion-card-header>
-        {{news.newsHead }}
+<ion-content class="background">
+<ion-card *ngFor="let news of newshome | async">
+    <ion-item>
+        <h2>{{news.newsHead }}</h2>
         <p>{{news.atdate }}</p>
-    </ion-card-header>
-    
+      </ion-item>
     <ion-card-content>
         {{news.newsApp }}
-    </ion-card-content> 
+    </ion-card-content>
   </ion-card>
-</ion-item>
 </ion-content>
+

@@ -17,27 +17,28 @@ import { EduPage } from '../pages/list/edu/edu';
 import { TechnoPage } from '../pages/list/techno/techno';
 import { AgriPage } from '../pages/list/agri/agri';
 
-
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  public rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  public pages: Array<{title: string, component: any ,icon: string;} >;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, 
+              public statusBar: StatusBar,
+              public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'หน้าหลัก', component: HomePage },
-      { title: 'ข้อมูลและข่าวสารของคณะ', component: ListPage },
-      { title: 'กิจกรรม', component: EventsPage },
-      { title: 'ปฎิทินวันหยุด', component: HolidayPage },
-      { title: 'แผนที่ภายในมหาวิทยาลัย', component: MapPage },
+      { title: 'หน้าหลัก',              component: HomePage, icon: 'home'},
+      { title: 'ข้อมูลและข่าวสารของคณะ', component: ListPage , icon: 'podium'},
+      { title: 'กิจกรรม',               component: EventsPage , icon: 'pulse'},
+      { title: 'ปฎิทินวันหยุด',           component: HolidayPage , icon: 'calendar'},
+      { title: 'แผนที่ภายในมหาวิทยาลัย',  component: MapPage , icon: 'map'},
     ];
 
   }

@@ -10,8 +10,8 @@
     <ion-title>Agri</ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content>
-  <ion-item>
+
+<ion-content class="background">
   <ion-card *ngFor="let news of newsagri | async">
       <ion-card-header>
           {{news.newsHead }}
@@ -21,7 +21,6 @@
       <ion-card-content>
           {{news.newsApp }}
       </ion-card-content> 
-    </ion-card>
-  </ion-item>
-  </ion-content>
+  </ion-card>
+</ion-content>
   
