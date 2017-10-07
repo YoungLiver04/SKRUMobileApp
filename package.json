@@ -62,7 +62,9 @@
             "cordova-plugin-whitelist": {},
             "ionic-plugin-keyboard": {}
         },
-        "platforms": []
+        "platforms": [
+            "android"
+        ]
     },
     "main": "news.js",
     "repository": {

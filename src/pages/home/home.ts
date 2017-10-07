@@ -10,7 +10,6 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
   tabBarElement: any;
-  splash = true;
   newshome: Observable <any> ;
   
   
@@ -23,16 +22,5 @@ export class HomePage {
      this.newshome = this.NewsServiceTsProvider.getnews();
      
    }
-
-   ionViewDidLoad() {
-    this.tabBarElement = 'none';
-    setTimeout(() => {
-      this.splash = false;
-      this.tabBarElement = 'flex';
-    }, 4000);
-  }
-
-  
-  
 
 }

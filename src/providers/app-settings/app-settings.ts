@@ -9,7 +9,7 @@ import 'rxjs/add/operator/map';
   for more info on providers and Angular DI.
 */
   const CONFIG ={
-    apiUrl: 'http://localhost:3000/',
+    apiUrl: 'http://192.168.1.50:3000/',
   }
 @Injectable()
 export class AppSettingsProvider {
