@@ -8,10 +8,10 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content  class="background">
     <ion-card *ngFor="let dbholidays of users | async">
         <ion-card-header>
-            {{dbholidays.holidayid }}
+            
             <p>{{dbholidays.holidaydate }}</p>
         </ion-card-header>
         
