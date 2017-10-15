@@ -4,11 +4,12 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title class="home"><ion-icon name="home"></ion-icon>Home </ion-title>
+    <ion-title class="home"><ion-icon name="home"></ion-icon>&nbsp;&nbsp;&nbsp;Home </ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content class="background">
   <img src="https://suthidasinchai.files.wordpress.com/2015/06/head.png">
+
 <ion-card *ngFor="let news of newshome | async">
     <ion-item>
         <h2>{{news.newsHead }}</h2>
@@ -17,6 +18,8 @@
     <ion-card-content>
         {{news.newsApp }}
     </ion-card-content>
+ 
   </ion-card>
+
 </ion-content>
 

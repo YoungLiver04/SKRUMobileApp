@@ -2,6 +2,8 @@ import { MgtServiceTsProvider } from '../../../providers/mgt-service-ts/mgt-serv
 import { Observable } from 'rxjs/Observable';
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
+import { InAppBrowser,InAppBrowserOptions } from '@ionic-native/in-app-browser';
+
 @IonicPage()
 @Component({
   selector: 'page-mgt',
@@ -10,8 +12,9 @@ import { IonicPage, NavController } from 'ionic-angular';
 export class MgtPage {
 
   newsmgt: Observable < any > ;
+  url : string;
   
-   constructor(public navCtrl: NavController, public MgtServiceTsProvider: MgtServiceTsProvider) {
+   constructor(public navCtrl: NavController, public MgtServiceTsProvider: MgtServiceTsProvider ,private InAppBrowser: InAppBrowser) {
      this.loadnews();
    }
 

@@ -3,20 +3,21 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title><ion-icon name="calendar"></ion-icon>ปฎิทินวันหยุด</ion-title>
+    <ion-title><ion-icon name="calendar"></ion-icon>&nbsp;&nbsp;&nbsp;ปฎิทินวันหยุด</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content  class="background">
+    
     <ion-card *ngFor="let dbholidays of users | async">
         <ion-card-header>
             
-            <p>{{dbholidays.holidaydate }}</p>
+            {{dbholidays.holidayname}}
         </ion-card-header>
         
         <ion-card-content>
-            {{dbholidays.holidayname}}
+          <p>{{dbholidays.holidaydate }}</p>
         </ion-card-content> 
     </ion-card>
   </ion-content>

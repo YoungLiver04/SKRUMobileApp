@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { NgCalendarModule } from 'ionic2-calendar';
 
 import { HttpModule } from '@angular/http';
 
@@ -60,6 +62,7 @@ import { TechnoServiceTsProvider } from '../providers/techno-service-ts/techno-s
     BrowserModule,
     HttpModule,
     IonicImageViewerModule,
+    NgCalendarModule,
     IonicModule.forRoot(MyApp),
     AgmCoreModule.forRoot({apiKey: ''}),
   ],
@@ -82,6 +85,7 @@ import { TechnoServiceTsProvider } from '../providers/techno-service-ts/techno-s
   providers: [
     StatusBar,
     SplashScreen,
+    InAppBrowser,
     
    
     {provide: ErrorHandler, useClass: IonicErrorHandler },

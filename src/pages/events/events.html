@@ -3,16 +3,23 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title><ion-icon name="pulse"></ion-icon>กิจกรรม</ion-title>
+    <ion-title><ion-icon name="pulse"></ion-icon> &nbsp;&nbsp;&nbsp;กิจกรรม</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content  class="background">
+    <div class="date"> 
+        
+            <iframe 
+            src="https://www.google.com/calendar/embed?mode=AGENDA&amp;showTitle=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=kung028%40gmail.com&amp;color=%23A32929&amp;src=g02drc54vijlv8j3cvhkquh8no%40group.calendar.google.com&amp;color=%232952A3&amp;src=okasn68863i5dc08fpgqjlftag%40group.calendar.google.com&amp;color=%231B887A&amp;src=mqbguhk3vod28kjb8bml8v949g%40group.calendar.google.com&amp;color=%23B1365F&amp;src=nlae0asdq6b3remgf860tedlvk%40group.calendar.google.com&amp;color=%23BE6D00&amp;src=qoscdq0618kaulijk6ths3tq54%40group.calendar.google.com&amp;color=%23AB8B00&amp;src=t6qtupv39hja72edk0vc1qi95o%40group.calendar.google.com&amp;color=%23333333&amp;src=u90ua789chui18680u4es1r3u8%40group.calendar.google.com&amp;color=%232F6309&amp;src=qc2fkvp7v5t37plqbq0opjljg4%40group.calendar.google.com&amp;color=%23060D5E&amp;src=on162tqe5a147snokht5pgr6ss%40group.calendar.google.com&amp;color=%2342104A&amp;src=gehfdtm9pg00nas3edsqlpgqps%40group.calendar.google.com&amp;color=%23865A5A&amp;ctz=Asia%2FBangkok" 
+            style=" border-width:0 " width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+           
+       </div>
     <ion-card *ngFor="let dbevents of users | async">
         <ion-card-header>
             {{dbevents.eventname }}
-            
+            <p>{{dbevents.eventdate}}</p>
         </ion-card-header>
         
         <ion-card-content>
